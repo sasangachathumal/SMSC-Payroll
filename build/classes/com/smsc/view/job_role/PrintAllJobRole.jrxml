@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="tele" class="java.lang.String"/>
+	<parameter name="fax" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from Job_Role j;]]>
+	</queryString>
+	<field name="Jrid" class="java.lang.String"/>
+	<field name="Name" class="java.lang.String"/>
+	<field name="Pension_Age" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="24" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Job Role Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="127" height="30"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[Job Role ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="0" width="231" height="30"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[Job Role Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="0" width="194" height="30"/>
+				<textElement>
+					<font fontName="DejaVu Serif" size="24"/>
+				</textElement>
+				<text><![CDATA[Pension Age]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="30" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="130" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Jrid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="231" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="0" width="194" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{Pension_Age}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="555" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="102" splitType="Stretch">
+			<textField>
+				<reportElement x="130" y="2" width="318" height="19"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="21" width="318" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="41" width="318" height="21"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{tele}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="62" width="318" height="18"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{fax}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="80" width="318" height="22"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{email}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="2" width="130" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Company Name  :  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="130" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Address  :  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="42" width="130" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Telephone  :  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="62" width="130" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Fax  :  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="82" width="130" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[E-mail  :  ]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
