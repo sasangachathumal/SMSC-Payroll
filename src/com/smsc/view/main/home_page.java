@@ -53,6 +53,7 @@ public class home_page extends javax.swing.JFrame {
         an=new AnimationClass();
         mp=new mp3play();
         setfalse();
+        this.jPanel2.setBackground(new Color(255, 255, 255, (int) 0.5));
     }
 
     /**
@@ -110,6 +111,15 @@ public class home_page extends javax.swing.JFrame {
         btViewPaymentinfo = new javax.swing.JButton();
         btViewCompanyinfo = new javax.swing.JButton();
         btViewEmployeeinfo = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        logout = new javax.swing.JLabel();
+        information = new javax.swing.JLabel();
+        options = new javax.swing.JLabel();
+        cal = new javax.swing.JLabel();
+        googel = new javax.swing.JLabel();
+        gmail = new javax.swing.JLabel();
+        note = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton12 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -121,15 +131,6 @@ public class home_page extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        logout = new javax.swing.JLabel();
-        information = new javax.swing.JLabel();
-        options = new javax.swing.JLabel();
-        cal = new javax.swing.JLabel();
-        googel = new javax.swing.JLabel();
-        gmail = new javax.swing.JLabel();
-        note = new javax.swing.JLabel();
         mainpanel = new javax.swing.JPanel();
         btMenu = new javax.swing.JButton();
         btSettings = new javax.swing.JButton();
@@ -813,224 +814,6 @@ public class home_page extends javax.swing.JFrame {
         });
         jPanel1.add(btViewEmployeeinfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 280, 40));
 
-        jPanel2.setLayout(null);
-
-        jButton12.setBackground(new java.awt.Color(0, 102, 153));
-        jButton12.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton12.setText("Manage Employee info");
-        jButton12.setBorderPainted(false);
-        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton12MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton12MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton12MouseExited(evt);
-            }
-        });
-        jPanel2.add(jButton12);
-        jButton12.setBounds(0, 0, 80, 40);
-
-        jButton3.setBackground(new java.awt.Color(0, 102, 153));
-        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton3.setText("Manage Employee loans");
-        jButton3.setBorderPainted(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton3MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton3MouseExited(evt);
-            }
-        });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton3);
-        jButton3.setBounds(0, 40, 80, 40);
-
-        jButton4.setBackground(new java.awt.Color(0, 102, 153));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton4.setText("Manage Employee leaves");
-        jButton4.setBorderPainted(false);
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton4MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton4MouseExited(evt);
-            }
-        });
-        jPanel2.add(jButton4);
-        jButton4.setBounds(0, 80, 80, 40);
-
-        jButton5.setBackground(new java.awt.Color(0, 102, 153));
-        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton5.setText("Manage Employee salary");
-        jButton5.setBorderPainted(false);
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton5MouseExited(evt);
-            }
-        });
-        jPanel2.add(jButton5);
-        jButton5.setBounds(0, 120, 80, 50);
-
-        jButton6.setBackground(new java.awt.Color(0, 102, 153));
-        jButton6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton6.setText("Manage Employee job role");
-        jButton6.setBorderPainted(false);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton6MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton6MouseExited(evt);
-            }
-        });
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton6);
-        jButton6.setBounds(0, 170, 80, 50);
-
-        jButton7.setBackground(new java.awt.Color(0, 102, 153));
-        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton7.setText("Manage Employee grade");
-        jButton7.setBorderPainted(false);
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton7MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton7MouseExited(evt);
-            }
-        });
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton7);
-        jButton7.setBounds(0, 220, 80, 40);
-
-        jButton8.setBackground(new java.awt.Color(0, 102, 153));
-        jButton8.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton8.setText("Manage Employee attendance");
-        jButton8.setBorderPainted(false);
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton8MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton8MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton8MouseExited(evt);
-            }
-        });
-        jPanel2.add(jButton8);
-        jButton8.setBounds(0, 260, 80, 40);
-
-        jButton11.setBackground(new java.awt.Color(0, 102, 153));
-        jButton11.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton11.setText("Manage Employee unions");
-        jButton11.setBorderPainted(false);
-        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton11MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton11MouseExited(evt);
-            }
-        });
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton11);
-        jButton11.setBounds(0, 300, 80, 40);
-
-        jButton10.setBackground(new java.awt.Color(0, 102, 153));
-        jButton10.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton10.setText("Manage Company department");
-        jButton10.setBorderPainted(false);
-        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton10MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton10MouseExited(evt);
-            }
-        });
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jButton10);
-        jButton10.setBounds(0, 340, 80, 40);
-
-        jButton9.setBackground(new java.awt.Color(0, 102, 153));
-        jButton9.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jButton9.setText("Manage Company Reports");
-        jButton9.setBorderPainted(false);
-        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton9MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton9MouseExited(evt);
-            }
-        });
-        jPanel2.add(jButton9);
-        jButton9.setBounds(0, 380, 80, 50);
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 100, 430));
-
         jButton1.setBackground(new java.awt.Color(0, 102, 153));
         jButton1.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jButton1.setText("X");
@@ -1120,20 +903,238 @@ public class home_page extends javax.swing.JFrame {
         note.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(note, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 60, 30));
 
+        jPanel2.setLayout(null);
+
+        jButton12.setBackground(new java.awt.Color(0, 102, 153));
+        jButton12.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton12.setText("Manage Employee info");
+        jButton12.setBorderPainted(false);
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton12.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton12MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton12MouseExited(evt);
+            }
+        });
+        jPanel2.add(jButton12);
+        jButton12.setBounds(0, 0, 270, 40);
+
+        jButton3.setBackground(new java.awt.Color(0, 102, 153));
+        jButton3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton3.setText("Manage Employee loans");
+        jButton3.setBorderPainted(false);
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton3MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton3MouseExited(evt);
+            }
+        });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton3);
+        jButton3.setBounds(0, 40, 281, 40);
+
+        jButton4.setBackground(new java.awt.Color(0, 102, 153));
+        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton4.setText("Manage Employee leaves");
+        jButton4.setBorderPainted(false);
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton4MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton4MouseExited(evt);
+            }
+        });
+        jPanel2.add(jButton4);
+        jButton4.setBounds(0, 80, 290, 40);
+
+        jButton5.setBackground(new java.awt.Color(0, 102, 153));
+        jButton5.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton5.setText("Manage Employee salary");
+        jButton5.setBorderPainted(false);
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton5MouseExited(evt);
+            }
+        });
+        jPanel2.add(jButton5);
+        jButton5.setBounds(0, 120, 291, 50);
+
+        jButton6.setBackground(new java.awt.Color(0, 102, 153));
+        jButton6.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton6.setText("Manage Employee job role");
+        jButton6.setBorderPainted(false);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton6MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton6MouseExited(evt);
+            }
+        });
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton6);
+        jButton6.setBounds(0, 170, 310, 50);
+
+        jButton7.setBackground(new java.awt.Color(0, 102, 153));
+        jButton7.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton7.setText("Manage Employee grade");
+        jButton7.setBorderPainted(false);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton7MouseExited(evt);
+            }
+        });
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton7);
+        jButton7.setBounds(0, 220, 290, 40);
+
+        jButton8.setBackground(new java.awt.Color(0, 102, 153));
+        jButton8.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton8.setText("Manage Employee attendance");
+        jButton8.setBorderPainted(false);
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton8MouseExited(evt);
+            }
+        });
+        jPanel2.add(jButton8);
+        jButton8.setBounds(0, 260, 340, 40);
+
+        jButton11.setBackground(new java.awt.Color(0, 102, 153));
+        jButton11.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton11.setText("Manage Employee unions");
+        jButton11.setBorderPainted(false);
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton11MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton11MouseExited(evt);
+            }
+        });
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton11);
+        jButton11.setBounds(0, 300, 300, 40);
+
+        jButton10.setBackground(new java.awt.Color(0, 102, 153));
+        jButton10.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton10.setText("Manage Company department");
+        jButton10.setBorderPainted(false);
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton10MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton10MouseExited(evt);
+            }
+        });
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton10);
+        jButton10.setBounds(0, 340, 350, 40);
+
+        jButton9.setBackground(new java.awt.Color(0, 102, 153));
+        jButton9.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jButton9.setText("Manage Company Reports");
+        jButton9.setBorderPainted(false);
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton9MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton9MouseExited(evt);
+            }
+        });
+        jPanel2.add(jButton9);
+        jButton9.setBounds(0, 380, 310, 50);
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 350, 430));
+
         mainpanel.setOpaque(false);
 
         javax.swing.GroupLayout mainpanelLayout = new javax.swing.GroupLayout(mainpanel);
         mainpanel.setLayout(mainpanelLayout);
         mainpanelLayout.setHorizontalGroup(
             mainpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 790, Short.MAX_VALUE)
+            .addGap(0, 890, Short.MAX_VALUE)
         );
         mainpanelLayout.setVerticalGroup(
             mainpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 590, Short.MAX_VALUE)
         );
 
-        jPanel1.add(mainpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 90, 790, 590));
+        jPanel1.add(mainpanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 890, 590));
 
         btMenu.setBackground(new java.awt.Color(0, 153, 204));
         btMenu.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
