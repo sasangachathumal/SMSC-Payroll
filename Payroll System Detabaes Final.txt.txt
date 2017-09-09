@@ -1,0 +1,114 @@
+CREATE DATABASE Payroll_System;
+USE Payroll_System;
+
+CREATE TABLE Login_Details(Lid VARCHAR(10) NOT NULL,User_Name VARCHAR(500) NOT NULL,Password VARCHAR(500) NOT NULL,Code VARCHAR(500) NOT NULL,Answer VARCHAR(500) NOT NULL,CONSTRAINT PRIMARY KEY(Lid));
+
+insert into Login_Details values('U001','sasanga','1234','What is my age?','20');
+
+CREATE TABLE Unions(Uid VARCHAR(10) NOT NULL,Name VARCHAR(200),OpenDate DATE,MSFee DECIMAL(50,2)NOT NULL,Register_No VARCHAR(50), CONSTRAINT PRIMARY KEY(Uid));
+
+insert into Unions values('U001','Sewaka Ekamuthuwa','2013-05-20',350,125478);
+insert into Unions values('U002','Nidahas Sewaka Ekamuthuwa','2013-05-20',150,658459);
+insert into Unions values('U003','Wurthiya Ekamuthuwa','2012-02-10',250,123911);
+insert into Unions values('U004','Nidahas Sewaka Wurthiya Ekamuthuwa','2012-10-05',200,753159);
+insert into Unions values('U005','Sewaka Sangamaya','2014-05-20',150,654852);
+
+CREATE TABLE Department(Did VARCHAR(10) NOT NULL,Name VARCHAR(200) NOT NULL,Building VARCHAR(200),CONSTRAINT PRIMARY KEY(Did));
+
+insert into Department values('D001','AccountDepartment','No:2');
+insert into Department values('D002','ManagementDepartment','No:3');
+insert into Department values('D003','TransportDepartment','No:3');
+insert into Department values('D004','FrontDepartment','No:1');
+insert into Department values('D005','ProductsDepartment','No:2');
+
+CREATE TABLE Job_Role(Jrid VARCHAR(10) NOT NULL,Name VARCHAR(200) NOT NULL,Pension_Age VARCHAR(100),CONSTRAINT PRIMARY KEY(Jrid));
+
+
+
+insert into Job_Role values('Jr001','TransportManager','45 old');
+insert into Job_Role values('Jr002','GManager','50 old');
+insert into Job_Role values('Jr003','AccountManager','50 old');
+insert into Job_Role values('Jr004','FrontManager','40 old');
+insert into Job_Role values('Jr005','ProductManager','40 old');
+
+CREATE TABLE Grade(
+Gid VARCHAR(10) NOT NULL,
+Name VARCHAR(200) NOT NULL,
+Date VARCHAR(20) NOT NULL,
+Basic_Salary DECIMAL(50,2) NOT NULL,
+Dalyworking_Rate VARCHAR(50),
+Maxloan_Amount DECIMAL(50,2),
+Transport_Amount DECIMAL(50,2),
+Training_Preiod VARCHAR(10),
+Training_Fee DECIMAL(50,2),
+MaxNopay_Rate VARCHAR(50),
+Nopey_Fee DECIMAL(50,2),
+Weekend_Ot_Rate VARCHAR(50),
+Weekend_ot_Fee DECIMAL(50,2),
+Weekday_Ot_Rate VARCHAR(50),
+Weekday_ot_Fee DECIMAL(50,2),
+No_of_Leaves VARCHAR(100),
+No_of_Halfday_Leaves VARCHAR(100),
+CONSTRAINT PRIMARY KEY(Gid)
+);
+
+
+insert into Grade values('G001','G/Manager','2014-05-20',100000.00,'8 Hour',1000000.00,20000.00,'2Year',35000.00,'3 Months',2000.00,'5 Hour',5000.00,'3 Hour',2500.00,'10 Days','8 Days');
+insert into Grade values('G002','F/Manager','2014-05-20',75000.00,'8 Hour',500000.00,15000.00,'2 Year',20000.00,'3 Months',2000.00,'5 Hour',3000.00,'3 Hour',1500.00,'8 Days','6 Days');
+insert into Grade values('G003','P/Manager','2014-05-20',75000.00,'8 Hour',300000.00,10000.00,'3 Year',12000.00,'3 Months',2000.00,'5 Hour',2000.00,'3 Hour',1500.00,'5 Days','3 Days');
+insert into Grade values('G004','Manager','2014-05-20',50000.00,'8 Hour',200000.00,5000.00,'2 Year',10000.00,'3 Months',2000.00,'6 Hour',2000.00,'3 Hour',1000.00,'5 Days','2 Days');
+insert into Grade values('G005','Clack','2014-05-20',25000.00,'8 Hour',100000.00,3000.00,'2 Year',10000.00,'3 Months',2000.00,'8 Hour',2000.00,'4 Hour',1000.00,'3 Days','3 Days');
+
+
+
+CREATE TABLE Salary(Sid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,Attendance_Incentive DECIMAL(50,2),Promotion_Incentive DECIMAL(50,2),Ot_Bonus DECIMAL(50,2),Bonus DECIMAL(50,2),Transport DECIMAL(50,2),Etf DECIMAL(50,2),Epf DECIMAL(50,2),Loan_Payment DECIMAL(50,2),Damage DECIMAL(50,2),Union_Payment DECIMAL(50,2),Salary_Advance DECIMAL(50,2),Tax DECIMAL(50,2),Half_DAY DECIMAL(50,2),No_Pay DECIMAL(50,2),No_of_Working_days INT, Total_Amount DECIMAL(50,2)  NOT NULL,CONSTRAINT PRIMARY KEY(Sid));
+
+
+insert into Salary values('S001','E001',12000.00,10000.00,2000.00,3000.00,10000.00,2500.00,5000.00,4500.00,10000.00,350.00,10000.00,2000.00,1000.00,6000.00,22,45000.00);
+
+CREATE TABLE Salary_Payment(Spid VARCHAR(10) NOT NULL,Sid VARCHAR(10) NOT NULL,Date DATE,Amount DECIMAL(50,2),Cheque_No VARCHAR(10),Bank_Name VARCHAR(50),CONSTRAINT PRIMARY KEY(Spid),CONSTRAINT FOREIGN KEY(Sid)REFERENCES Salary(Sid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Employee(Eid VARCHAR(10) NOT NULL,Gid VARCHAR(10) NOT NULL,Surename VARCHAR(100),Lastname VARCHAR(100),Gnder VARCHAR(10),Nic_No VARCHAR(15) NOT NULL,Address VARCHAR(200),Telephone VARCHAR(100),Date DATE,CONSTRAINT PRIMARY KEY(Eid),CONSTRAINT FOREIGN KEY(Gid) REFERENCES Grade(Gid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Loan(Lid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,Date DATE NOT NULL,Amount DECIMAL(50,2) NOT NULL,Valid_Preiod VARCHAR(10) NOT NULL,No_of_Instalments VARCHAR(100) NOT NULL,Value_of_Instelment DECIMAL(50,2) NOT NULL,Interest_Rate DECIMAL(50,2) NOT NULL,If_Pay INT,CONSTRAINT PRIMARY KEY(Lid),CONSTRAINT FOREIGN KEY(Eid)REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Loan_Payment(Lpid VARCHAR(10) NOT NULL,Lid VARCHAR(10) NOT NULL,Sid VARCHAR(10) NOT NULL,CONSTRAINT FOREIGN KEY(Lid) REFERENCES Loan(Lid),CONSTRAINT FOREIGN KEY(Sid) REFERENCES Salary(Sid));
+
+CREATE TABLE Attendance(Atid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,Date DATE,Date_type VARCHAR(50),Attend VARCHAR(50),Arrival_Time DECIMAL(50,2),Leave_Time DECIMAL(50,2),Ot_Bonus DECIMAL(50,2),CONSTRAINT PRIMARY KEY(Atid),CONSTRAINT FOREIGN KEY(Eid)REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Bonus(Bid VARCHAR(10) NOT NULL,Name VARCHAR(100) NOT NULL,Type VARCHAR(50),Valid_preiod VARCHAR(200),BAmount DECIMAL(50,2),CONSTRAINT PRIMARY KEY(Bid));
+
+
+
+CREATE TABLE Bonus_Details(Bid VARCHAR(10) NOT NULL,Eid VARCHAR(10),CONSTRAINT FOREIGN KEY(Bid) REFERENCES Bonus(Bid),CONSTRAINT FOREIGN KEY(Eid) REFERENCES Employee(Eid));
+
+
+
+
+CREATE TABLE Leaves(Leid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,Leaves_Date DATE NOT NULL,Leaves_Type VARCHAR(50) NOT NULL,Time DECIMAL(10,2),CONSTRAINT PRIMARY KEY(Leid),CONSTRAINT FOREIGN KEY(Eid) REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+
+
+
+CREATE TABLE Advance_Salary(
+Asid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,Pay_Date DATE NOT NULL,Advance DECIMAL(50,2) NOT NULL,CONSTRAINT PRIMARY KEY(Asid),CONSTRAINT FOREIGN KEY (Eid) REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+
+
+CREATE TABLE Damage(Deid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,Damage_Date DATE NOT NULL,Lost INT NOT NULL,CONSTRAINT PRIMARY KEY(Deid),CONSTRAINT FOREIGN KEY(Eid) REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Damage_Description(Ddid VARCHAR(10) NOT NULL,Deid VARCHAR(10) NOT NULL,Description VARCHAR(200) NOT NULL,CONSTRAINT PRIMARY KEY(Ddid),CONSTRAINT FOREIGN KEY(Deid) REFERENCES Damage(Deid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Job_role_Detail(Jrid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,CONSTRAINT FOREIGN KEY(Jrid) REFERENCES Job_Role(Jrid)ON Delete Cascade On update cascade,CONSTRAINT FOREIGN KEY(Eid) REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Department_Detail(Did VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,CONSTRAINT FOREIGN KEY(Did) REFERENCES Department(Did)ON Delete Cascade On update cascade,CONSTRAINT FOREIGN KEY(Eid) REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Union_Detail(Uid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,CONSTRAINT FOREIGN KEY(Uid) REFERENCES Unions(Uid)ON Delete Cascade On update cascade,CONSTRAINT FOREIGN KEY(Eid) REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Employee_Expenses(EEid VARCHAR(10) NOT NULL,EPF_Employee DECIMAL(50,2) NOT NULL,EPFCompany DECIMAL(50,2) NOT NULL,ETF DECIMAL(50,2) NOT NULL,Attendance_Incentive DECIMAL(50,2) NOT NULL,Promotion_Incentive DECIMAL(50,2) NOT NULL,Add_Date VARCHAR(50) NOT NULL,Update_Date VARCHAR(50) NOT NULL,CONSTRAINT PRIMARY KEY(EEid));
+
+CREATE TABLE Employee_Expenses_Detail(EEid VARCHAR(10) NOT NULL,Sid VARCHAR(10) NOT NULL ,CONSTRAINT FOREIGN KEY(EEid) REFERENCES Employee_Expenses(EEid)ON Delete Cascade On update cascade,CONSTRAINT FOREIGN KEY(Sid) REFERENCES Salary(Sid)ON Delete Cascade On update cascade);
+
+CREATE TABLE Company_Details(Cid VARCHAR(10) NOT NULL,Company_Name VARCHAR(100) NOT NULL,Company_Address VARCHAR(300) NOT NULL,Telephone VARCHAR(11) NOT NULL,Fax VARCHAR(100) NOT NULL,EMail VARCHAR(200) NOT NULL,Regester_No VARCHAR(100) NOT NULL,CONSTRAINT PRIMARY KEY(Cid));
+
+CREATE TABLE HalfDay(Hid VARCHAR(10) NOT NULL,Eid VARCHAR(10) NOT NULL,Date DATE,Today_ArrivalTime DECIMAL(50,2),Halfday_LeaveTime DECIMAL(50,2),CONSTRAINT PRIMARY KEY(Hid),CONSTRAINT FOREIGN KEY(Eid)REFERENCES Employee(Eid)ON Delete Cascade On update cascade);
